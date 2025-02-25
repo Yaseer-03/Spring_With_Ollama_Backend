@@ -14,14 +14,9 @@ public class ChatController {
 
     private final ChatService chatService;
 
-    @PostMapping(value = "/prompt", produces = "text/event-stream")
+    @PostMapping(value = "/chat", produces = "text/event-stream")
     public Flux<String> messageRequest(@RequestBody Prompt prompt) {
         return chatService.getMessage(prompt.getPrompt());
-    }
-
-    @GetMapping(value = "/prompt", produces = "text/event-stream")
-    public Flux<String> messageRequest(@RequestParam String prompt) {
-        return chatService.getMessage(prompt);
     }
 
 }
