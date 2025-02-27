@@ -5,5 +5,5 @@ target/
 !**/src/test/**/target/
 
 
-.vscode/
-application.properties
+!.vscode/
+!application.properties
