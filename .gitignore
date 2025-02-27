@@ -5,5 +5,5 @@ target/
 !**/src/test/**/target/
 
 
-!.vscode/
-!application.properties
+# Ignore all application.properties files
+**/application.properties
